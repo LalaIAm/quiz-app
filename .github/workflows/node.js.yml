@@ -45,8 +45,8 @@ jobs:
       - name: Download the build folder 
         uses: actions/download-artifact@v4
         with:
-          name: build
-          path: build 
+          name: dist
+          path: dist 
           
       - name: Cypress run 
         uses: cypress-io/github-action@v6
