@@ -1,0 +1,37 @@
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '20.x'
+  displayName: 'Install Node.js'
+
+- task: YarnInstaller@3
+  inputs:
+    versionSpec: '1.x'
+  displayName: 'Install Yarn'
+
+- task: CacheBeta@1
+  inputs:
+    key: npm | $(Agent.OS) | yarn.lock
+    path: /home/vsts/.npm 
+    restoreKeys: npm | $(Agent.OS) | package-lock.json
+  displayName: 'Cache NPM packages'
+
+- task: CacheBeta@1
+  inputs:
+    key: cypress | $(Agent.OS) | package-lock.json
+    path: /home/vsts/.cache/Cypress
+    restoreKeys: cypress | $(Agent.OS) | package-lock.json
+  displayName: Cache Cypress binary 
+
+- script: yarn install 
+  displayName: 'Install dependencies'
+
+- script: yarn cy:verify 
+  displayName: 'Verify Cypress'

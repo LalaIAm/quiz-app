@@ -1,0 +1,22 @@
+button {
+    outline: none;
+    border: none;
+}
+
+.theme-btn {
+  width: 26.625rem;
+  border-radius: 999px;
+  background: linear-gradient(115.24deg, #8040ff, #08bafe);
+  padding: 1rem 0rem;
+  letter-spacing: -.01em;
+  color: white;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:hover {
+    box-shadow: 0 0 12px 5px rgba(255, 255, 255, 0.15);
+    background: $white;
+    color: $darkBlue;
+  }
+}

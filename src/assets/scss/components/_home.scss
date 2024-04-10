@@ -1,0 +1,44 @@
+.home-page {
+   width: 100%;
+   position: relative;
+   background: $darkBlue;
+   height: 100vh;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 15.75rem 24.875rem;
+   gap: 3.75rem;
+   text-align: center;
+   color: white;
+
+   .home-logo {
+    width: 348px;
+    position: relative;
+    height: 218px;
+    overflow: hidden;
+    flex-shrink: 0;
+   }
+
+   h1 {
+    letter-spacing: -0.01em;
+    line-height: 140%;
+    font-size: 2.875rem;
+   }  
+
+   p {
+    letter-spacing: -0.01em;
+    line-height: 140%;
+    color: $white60;
+    font-size: 1.5rem;
+   }
+
+   .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+   }
+}
