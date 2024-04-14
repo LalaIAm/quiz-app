@@ -2,11 +2,10 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import fs from 'fs/promises';
-import svgr from 'vite-plugin-svgr'
+import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/quiz-app',
   plugins: [svgr(), react()],
   resolve: {
     alias: {

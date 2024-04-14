@@ -18,3 +18,30 @@ body,
 a {
   text-decoration: none;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap');
+body {
+  	margin: 0; line-height: normal;
+}
+:root {
+  	
+  	/* fonts */
+  	--headings: Nunito;
+  	
+  	/* font sizes */
+  	--headings-size: 1.25rem;
+  	--headingm-size: 1.5rem;
+  	--subtext-size: 0.875rem;
+  	
+  	/* Colors */
+  	--gray-blue: #4950ae;
+  	--dark-blue: #13163d;
+  	--white: #fff;
+  	
+  	/* Gaps */
+  	--gap-3xs: 0.625rem;
+  	
+  	/* Border radiuses */
+  	--br-base: 16px;
+  	
+}
